@@ -1,0 +1,92 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+header#banner.hero-unit
+  .container
+    .spacer
+    .spacer
+    .row
+      .col-sm-9.vcenter.text-left
+        h1 Algorithm configuration made easy.
+        p.lead IR Studio is a cross-platform application making the parameter tuning process easier.
+        a.btn.btn-lg.btn-primary(href='#', role='button') See it in action »
+      .col-sm-3.vcenter
+        img(width='100%', src='assets/images/logo.png')
+    .spacer
+    .spacer
+
+
+  .container
+    .row
+      .col-md-4
+        h3 Build
+          =" "
+          strong scenarios
+        p The scenario describes the parameter space, the training instances, the hook-run method and the initial candidates.
+      .col-md-4
+        h3 Launch
+          =" "
+          strong explorations
+        p Explore the parameter space with various methods such as iRace, one factor at a time or ablation analysis.
+      .col-md-4
+        h3 Analyse
+          =" "
+          strong results
+        p IR Studio provides interesting graphs and plots based on the exploration output data
+
+section.dark
+  .container
+    .row
+      .col-sm-12.text-center
+        h3 Use several algorithm tuners
+        p.lead IR Studio allows to combine and confront results from various sources
+    .row
+      .col-sm-12
+        p Currently, 3 tuning methods are implemented in IR Studio: iRace, Ablation analysis and the one-factor-at-a-time method. After carrying out
+          | an exploration, it is possible to create reports. When trying several explorations with various tools on the
+          | same scenario, you can also create aggregated reports, which will allow to visually combine and
+          | confront the output of these tools.
+
+    .row
+      .col-sm-4
+        h4 iRace
+        p The irace package implements the iterated racing procedure, an extension of the Iterated F-race procedure.
+          | It builds upon the race package by <a href='#'>Birattari</a> and it is implemented in R.<br />
+          span.text-muted Note: to use iRace, you must install the
+            a(href='http://iridia.ulb.ac.be/irace/')  iRace package
+            | .
+
+      .col-sm-4
+        h4 Ablation analysis
+        p This procedure investigates the path of configurations obtained by iteratively modifying parameter settings
+          | from a source configuration (e.g., an expert-defined default) to those from a target configuration (e.g., one
+          | obtained from an automatic configurator).
+
+      .col-sm-4
+        h4 One factor at a time
+        p This tuning method takes an initial candidate and does a sort of exhaustive search in the parameter space.
+
+    .row
+      .spacer
+      .spacer
+      .col-sm-12.text-center
+        p Want to add your tuner to IR Studio? Contact us!
+
+section
+  .container
+    .row
+      .col-sm-12.text-center
+        h3 Platform-independent
+        p.lead IR Studio runs on OS X, Linux, Windows.. and as a web app.
+    .row
+      .col-sm-6
+        | Built with the
+        strong  Electron framework
+        |, the desktop version of IR Studio comes as a whole framework covering the
+        | complete process of algorithm configuration.
+      .col-sm-6
+        | Built with the Electron framework, the desktop version of IR Studio comes as a whole framework covering the
+        | complete process of algorithm configuration.
+
+
+div(ng-include='"components/footer/footer.html"')
+
